@@ -1,0 +1,21 @@
+<?xml version="1.0"?>
+<package >
+  <metadata>
+    <id>SPAngualrJS</id>
+    <version>1.0.0</version>
+    <authors>Amr Fouad</authors>
+    <owners>Amr Fouad</owners>
+    <requireLicenseAcceptance>false</requireLicenseAcceptance>
+    <description>Adding Module elements to SharePoint-hosted Add-in to user Angularjs</description>
+    <releaseNotes>Just for personal use</releaseNotes>
+    <copyright>Copyright 2016</copyright>
+    <tags>SharePoint Add-in </tags>
+  </metadata>
+  <files>
+    <file  src="tools\init.ps1" target="tools\init.ps1"/>
+    <file  src="tools\addFiles.psm1" target="tools\addFiles.psm1"/>
+    <file src="content\app\**\*.*" target="app\" />
+    <file src="content\assets\**\*.*" target="assets\" />
+    <file src="content\pages\*.*" target="content\Pages\" />
+  </files>
+</package>

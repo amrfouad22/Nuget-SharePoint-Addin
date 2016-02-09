@@ -1,0 +1,42 @@
+﻿{
+  "comments": [
+    {
+      "text": "Hello there Please comment your name",
+      "username": "John Smith",
+      "image": "",
+      "datetime": "15 Jan 2016 14:00",
+      "replies": [
+        {
+          "text": "My name is Mark",
+          "username": "Mark Ahmed",
+          "image": "",
+          "datetime": "10 June 2016 14:00",
+          "replies": [
+            {
+              "text": "Hello Mark thanks for commenting ",
+              "username": "John Smith",
+              "image": "",
+              "datetime": "15 Jan 2016 14:00"
+            }
+          ]
+        }
+        ,
+        {
+          "text": "My name is Amr",
+          "username": "Amr Fouad",
+          "image": "",
+          "datetime": "10 June 2016 14:00",
+          "replies": [
+            {
+              "text": "Hello Amr thanks for commenting ",
+              "username": "John Smith",
+              "image": "",
+              "datetime": "15 Jan 2016 14:00"
+            }
+          ]
+        }
+      ] 
+    }
+  ]
+
+}
