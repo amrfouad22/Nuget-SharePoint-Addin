@@ -16,6 +16,7 @@
     <file  src="tools\addFiles.psm1" target="tools\addFiles.psm1"/>
     <file src="content\app\**\*.*" target="app\" />
     <file src="content\assets\**\*.*" target="assets\" />
+    <file src="content\templates\**\*.*" target="templates\" />
     <file src="content\pages\*.*" target="content\Pages\" />
   </files>
 </package>

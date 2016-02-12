@@ -9,5 +9,5 @@ gulp.task('build', function (cb) {
   });
 });
 gulp.task('watch',function(){
-   gulp.watch('*',['build']); 
+   gulp.watch('**/*',['build']); 
 });

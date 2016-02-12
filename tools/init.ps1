@@ -14,14 +14,15 @@ try{
     $project.ProjectItems.AddFromTemplate($itemTemplate,"assets")
     $assets=$project.ProjectItems.Item("assets")
     Add-Files "$installPath\assets" $assets  
-    #add custom comment list to the solution
-    $listItem=$solution2.GetProjectItemTemplate("SharePoint16_1List_CS_ITEM","CSharp")
+    #add custom comment list item template to the solution
+    $listItem="$installPath\templates\CommentList\CommentList.vstemplate"
+    $project.ProjectItems.AddFromTemplate($listItem,"CommentsList")
     write-output "done..."
 }
 catch{
     $ErrorMessage = $_.Exception.Message
     $FailedItem = $_.Exception.ItemName
-    write-host $ErrorMessage 
+    write-host $ErrorMessage
 }
 
 

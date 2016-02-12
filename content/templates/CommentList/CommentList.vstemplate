@@ -1,0 +1,24 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<VSTemplate Version="3.0.0" Type="Item" xmlns="http://schemas.microsoft.com/developer/vstemplate/2005" xmlns:sdk="http://schemas.microsoft.com/developer/vstemplate-sdkextension/2010">
+  <TemplateData>
+    <Name>CommentList</Name>
+    <Description>CommentList</Description>
+    <Icon>CommentList.ico</Icon>
+    <TemplateID>8e2c5a4e-521a-4892-acce-09023f42cf82</TemplateID>
+    <ProjectType>CSharp</ProjectType>
+    <RequiredFrameworkVersion>2.0</RequiredFrameworkVersion>
+    <NumberOfParentCategoriesToRollUp>1</NumberOfParentCategoriesToRollUp>
+    <DefaultName>Comment List</DefaultName>
+  </TemplateData>
+  <TemplateContent>
+    <Folder Name="CommentList" TargetFolderName="CommentList">
+      <ProjectItem ReplaceParameters="false" TargetFileName="Elements.xml">Elements.xml</ProjectItem>
+      <ProjectItem ReplaceParameters="false" TargetFileName="Schema.xml">Schema.xml</ProjectItem>
+      <ProjectItem ReplaceParameters="false" TargetFileName="SharePointProjectItem.spdata">SharePointProjectItem.spdata</ProjectItem>
+      <Folder Name="CommentListInstance" TargetFolderName="CommentListInstance">
+        <ProjectItem ReplaceParameters="false" TargetFileName="Elements.xml">Elements.xml</ProjectItem>
+        <ProjectItem ReplaceParameters="false" TargetFileName="SharePointProjectItem.spdata">SharePointProjectItem.spdata</ProjectItem>
+      </Folder>
+    </Folder>
+  </TemplateContent>
+</VSTemplate>

@@ -1,6 +1,5 @@
 #add files recursively to the SP module element passed as a second parameter.. 
 function Add-Files($path,$projectItem){
-    write-output "adding $path to $projectItem.Name"
     foreach ($item in Get-ChildItem $path)
     {
         if (Test-Path $item.FullName -PathType Container) 
