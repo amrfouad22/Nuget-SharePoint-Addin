@@ -17,6 +17,8 @@ try{
     #add custom comment list item template to the solution
     $listItem="$installPath\templates\CommentList\CommentList.vstemplate"
     $project.ProjectItems.AddFromTemplate($listItem,"CommentsList")
+    $clientWebPart="$installPath\templates\commentapp\CommentAppPart.vstemplate"
+    $project.ProjectItems.AddFromTemplate($clientWebPart,"CommentAppPart")
     write-output "done..."
 }
 catch{

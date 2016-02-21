@@ -1,4 +1,4 @@
-﻿<div class="post-block post-comments clearfix">
+﻿<div class="post-block post-comments clearfix" ng-init="main.loadComments()">
     <h3 class="heading-primary"><i class="fa fa-comments"></i>Comments ({{main.comments.length}})</h3>
    <comments comments="main.comments" page-id="main.pageId" template="../app/templates/comments.html"></comments>
 </div>

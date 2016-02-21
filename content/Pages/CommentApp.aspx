@@ -31,10 +31,6 @@
 		<!-- Vendor CSS -->
 		<link rel="stylesheet" href="../assets/vendor/bootstrap/bootstrap.css">
 		<link rel="stylesheet" href="../assets/vendor/fontawesome/css/font-awesome.css">
-		<link rel="stylesheet" href="../assets/vendor/simple-line-icons/css/simple-line-icons.css">
-		<link rel="stylesheet" href="../assets/vendor/owlcarousel/owl.carousel.min.css">
-		<link rel="stylesheet" href="../assets/vendor/owlcarousel/owl.theme.default.min.css">
-		<link rel="stylesheet" href="../assets/vendor/magnific-popup/magnific-popup.css">
 
 		<!-- Theme CSS -->
 		<link rel="stylesheet" href="../assets/css/theme.css">
@@ -65,6 +61,13 @@
 			<script src="vendor/respond/respond.js"></script>
 			<script src="vendor/excanvas/excanvas.js"></script>
 		<![endif]-->
+        <!-- Vendor -->
+		<!--[if lt IE 9]>
+		<script src="//code.jquery.com/jquery-1.11.3.min.js"></script>
+		<![endif]-->
+		<!--[if gte IE 9]><!-->
+		<script src="../assets/vendor/jquery/jquery.js"></script>
+		<!--<![endif]-->
 	</head>
 	<body>
 		<div class="body">
@@ -77,28 +80,8 @@
 				</div>
 			</div>
 		</div>
-		<!-- Vendor -->
-		<!--[if lt IE 9]>
-		<script src="//code.jquery.com/jquery-1.11.3.min.js"></script>
-		<![endif]-->
-		<!--[if gte IE 9]><!-->
-		<script src="../assets/vendor/jquery/jquery.js"></script>
-		<!--<![endif]-->
-		<script src="../assets/vendor/jquery.appear/jquery.appear.js"></script>
-		<script src="../assets/vendor/jquery.easing/jquery.easing.js"></script>
-		<script src="../assets/vendor/jquery-cookie/jquery-cookie.js"></script>
 		<script src="../assets/vendor/bootstrap/bootstrap.js"></script>
 		<script src="../assets/vendor/common/common.js"></script>
-		<script src="../assets/vendor/jquery.validation/jquery.validation.js"></script>
-		<script src="../assets/vendor/jquery.stellar/jquery.stellar.js"></script>
-		<script src="../assets/vendor/jquery.easy-pie-chart/jquery.easy-pie-chart.js"></script>
-		<script src="../assets/vendor/jquery.gmap/jquery.gmap.js"></script>
-		<script src="../assets/vendor/jquery.lazyload/jquery.lazyload.js"></script>
-		<script src="../assets/vendor/isotope/jquery.isotope.js"></script>
-		<script src="../assets/vendor/owlcarousel/owl.carousel.js"></script>
-		<script src="../assets/vendor/jflickrfeed/jflickrfeed.js"></script>
-		<script src="../assets/vendor/magnific-popup/jquery.magnific-popup.js"></script>
-		<script src="../assets/vendor/vide/vide.js"></script>
 		<!-- Theme Base, Components and Settings -->
 		<script src="../assets/js/theme.js"></script>
 		<!-- Theme Custom -->

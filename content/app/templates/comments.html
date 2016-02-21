@@ -1,5 +1,5 @@
 ﻿<ul class="comments">
-    <li ng-repeat="comment in comments">
+    <li ng-repeat="comment in comments|filter:replies">
         <div class="comment">
             <div class="img-thumbnail">
                 <img class="avatar" alt="" src="{{comment.image}}">
@@ -7,19 +7,19 @@
             <div class="comment-block">
                 <div class="comment-arrow"></div>
                 <span class="comment-by">
-                    <strong>{{comment.username}}</strong>
+                    <strong>{{comment.CreatedBy}}</strong>
                     <span class="pull-right">
                         <span> <a href="" ng-click="showReply(comment);"><i class="fa fa-reply"></i> Reply</a></span>
                     </span>
                 </span>
-                <p>{{comment.text}}</p>
-                <span class="date pull-right">{{comment.datetime}}</span>
+                <p>{{comment.Comment1}}</p>
+                <span class="date pull-right">{{comment.Created}}</span>
             </div>
             <div ng-if="comment.bReply">
                 <div class="row">
                     <div class="form-group">
                         <div class="col-md-12">
-                            <textarea maxlength="5000" rows="10" class="form-control" ng-model="comment.newReply"></textarea>
+                            <textarea maxlength="5000" rows="10" ng-model="comment.newReply"></textarea>
                         </div>
                     </div>
                 </div>
@@ -34,6 +34,6 @@
             </div>
         </div>
         <!--comments directive-->
-        <comments ng-if="comment.replies.length>0" comments="comment.replies" template="templates/comments.html"></comments>
+        <comments comments="comments" template="../app/templates/comments.html" page-id="comment.PageID" parent-id="comment.ID"></comments>
     </li>
 </ul>

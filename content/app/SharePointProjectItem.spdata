@@ -1,0 +1,14 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ProjectItem Type="Microsoft.VisualStudio.SharePoint.Module" DefaultFile="Elements.xml" SupportedTrustLevels="All" SupportedDeploymentScopes="Web, Site" xmlns="http://schemas.microsoft.com/VisualStudio/2010/SharePointTools/SharePointProjectItemModel">
+  <Files>
+    <ProjectItemFile Source="Elements.xml" Target="app\" Type="ElementManifest" />
+    <ProjectItemFile Source="Sample.txt" Target="app\" Type="ElementFile" />
+    <ProjectItemFile Source="controllers\mainController.js" Target="app\controllers\" Type="ElementFile" />
+    <ProjectItemFile Source="directives\comments.js" Target="app\directives\" Type="ElementFile" />
+    <ProjectItemFile Source="services\commentSvc.js" Target="app\services\" Type="ElementFile" />
+    <ProjectItemFile Source="templates\comments.html" Target="app\templates\" Type="ElementFile" />
+    <ProjectItemFile Source="views\main.html" Target="app\views\" Type="ElementFile" />
+    <ProjectItemFile Source="app.js" Target="app\" Type="ElementFile" />
+    <ProjectItemFile Source="comments.json" Target="app\" Type="ElementFile" />
+  </Files>
+</ProjectItem>

@@ -1,0 +1,13 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Elements xmlns="http://schemas.microsoft.com/sharepoint/">
+  <Module Name="app">
+    <File Path="app\Sample.txt" Url="app/Sample.txt" ReplaceContent="TRUE" />
+    <File Path="app\controllers\mainController.js" Url="app/controllers/mainController.js" ReplaceContent="TRUE" />
+    <File Path="app\directives\comments.js" Url="app/directives/comments.js" ReplaceContent="TRUE" />
+    <File Path="app\services\commentSvc.js" Url="app/services/commentSvc.js" ReplaceContent="TRUE" />
+    <File Path="app\templates\comments.html" Url="app/templates/comments.html" ReplaceContent="TRUE" />
+    <File Path="app\views\main.html" Url="app/views/main.html" ReplaceContent="TRUE" />
+    <File Path="app\app.js" Url="app/app.js" ReplaceContent="TRUE" />
+    <File Path="app\comments.json" Url="app/comments.json" ReplaceContent="TRUE" />
+  </Module>
+</Elements>

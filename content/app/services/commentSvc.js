@@ -5,61 +5,79 @@
         var service = {};
         //comment service functions abstraction layer with SP
         //load the comments
-        service.getComments = function (pageId, success, error) {
-           //var baseUrl = $location.absUrl().substring(0, $location.absUrl().indexOf('CommentApp'));
-           var comments=JSON.parse(
-               '{  \
-                   "comments": \
-                   [  {\
-                            "text": "Hello there Please comment your name",\
-                            "username": "John Smith",\
-                            "image": "",\
-                            "datetime": "15 Jan 2016 14:00",\
-                            "replies": [\
-                                {\
-                                "text": "My name is Mark",\
-                                "username": "Mark Ahmed",\
-                                "image": "",\
-                                "datetime": "10 June 2016 14:00",\
-                                "replies": [\
-                                    {\
-                                    "text": "Hello Mark thanks for commenting ",\
-                                    "username": "John Smith",\
-                                    "image": "",\
-                                    "datetime": "15 Jan 2016 14:00"\
-                                    }\
-                                ]\
-                                }\
-                                ,\
-                                {\
-                                "text": "My name is Amr",\
-                                "username": "Amr Fouad",\
-                                "image": "",\
-                                "datetime": "10 June 2016 14:00",\
-                                "replies": [\
-                                    {\
-                                    "text": "Hello Amr thanks for commenting ",\
-                                    "username": "John Smith",\
-                                    "image": "",\
-                                    "datetime": "15 Jan 2016 14:00"\
-                                    }\
-                                ]\
-                                }\
-                            ] \
-                            }\
-                        ]\
-                        }'
-           );
-           success(comments);
+        service.getComments = function (baseUrl,pageId, success, error) {
+            GetItemsREST(baseUrl, 'CommentList', '', function (comments) {
+                success(comments);
+            });
         }
         //add new comment/reply
-        service.addComment = function (comment,callback) {
-            callback(comment);
-                
+        service.addComment = function (baseUrl,comment, callback) {
+            //save the new Item to the comment list
+            GetDigest(baseUrl, function (d) {
+                AddItemREST(baseUrl, 'CommentList', comment, d, function (d) {
+                    callback(d);
+                });
+            });
         }
         service.addReply=function(reply,callback){
             callback(reply);
         }
         return service;
+    }
+
+    function GetItemsREST(baseUrl,listName, query, callback) {
+       
+        var RESTUrl = baseUrl + "/_api/web/lists/GetByTitle('" + listName + "')/items?" + query;
+        $.ajax(
+                    {
+                        url: RESTUrl,
+                        method: "GET",
+                        headers: {
+                            "accept": "application/json; odata=verbose",
+                        },
+                        success: function (data) {
+                            if (data.d.results.length > 0) {
+                                //render the data
+                                callback(data.d.results);
+                            }
+                        },
+                        error: function (err) {
+                        },
+                    }
+                );
+    }
+    function AddItemREST(baseUrl, listName, object,digest, callback) {
+        var RESTUrl = baseUrl + "/_api/web/lists/GetByTitle('" + listName + "')/items";
+        $.ajax(
+                {
+                    url: RESTUrl,
+                    method: "POST",
+                    data:JSON.stringify(object),
+                    headers: {
+                        "X-RequestDigest":digest,
+                        'Accept': 'application/json; odata=verbose',
+                        'Content-Type': 'application/json; odata=verbose'
+                    },
+                    success: function (data) {
+                            callback();
+                    },
+                    error: function (err) {
+                    },
+                }
+            );
+    }
+
+    function GetDigest(baseUrl,callback) {
+        $.ajax({
+            url: baseUrl + "/_api/contextinfo",
+            method: "POST",
+            headers: { "Accept": "application/json; odata=verbose" },
+            success: function (data) {
+                callback(data.d.GetContextWebInformation.FormDigestValue)
+            },
+            error: function (data, errorCode, errorMessage) {
+                console.log(errorMessage)
+            }
+        });
     }
 } ());

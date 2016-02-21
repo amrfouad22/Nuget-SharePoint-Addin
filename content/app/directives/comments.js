@@ -5,11 +5,13 @@
                 restrict: 'E',
                 replace: true,
                 scope: {
-                    pageId: '@',                    //filter out the comment to a specific page
+                    pageId: '=',                    //filter out the comment to a specific page
                     template: '@',                  //directive display template.
-                    comments:'='                    //comments passed to the directive.
+                    comments: '=',                  //comments passed to the directive.
+                    parentId:'='                    //parent item id , for the root level it will be empty string
                 }
             };
+           
             definition.link = function postLink(scope, element) {
                 scope.$watch('pageId', function () {
                     compile();
@@ -30,7 +32,11 @@
                 scope.addReply=function(comment){
                     comment.bReply=false;
                     $rootScope.$emit('reply:add',comment);
-                }   
+                }
+                //filter the replies based on the parent id and current page id from current scope.
+                scope.replies = function (item) {
+                    return item.ParentID == scope.parentId && item.PageID == scope.pageId;
+                }
             };
             return definition;
         }]);
