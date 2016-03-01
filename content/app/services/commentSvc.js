@@ -6,7 +6,7 @@
         //comment service functions abstraction layer with SP
         //load the comments
         service.getComments = function (baseUrl,pageId, success, error) {
-            GetItemsREST(baseUrl, 'CommentList', '', function (comments) {
+            GetItemsREST(baseUrl, 'CommentList', '$filter=PageID eq \''+pageId+'\'', function (comments) {
                 success(comments);
             });
         }
@@ -21,6 +21,19 @@
         }
         service.addReply=function(reply,callback){
             callback(reply);
+        }
+        service.getUserProps = function (baseUrl, callback) {
+            $.ajax({
+                url: baseUrl + "/_api/SP.UserProfiles.PeopleManager/GetMyProperties?$select=PictureUrl,DisplayName,AccountName,Email",
+                method: "GET",
+                headers: { "Accept": "application/json; odata=verbose" },
+                success: function (data) {
+                    callback(data)
+                },
+                error: function (data, errorCode, errorMessage) {
+                    console.log(errorMessage)
+                }
+            });
         }
         return service;
     }
@@ -66,7 +79,6 @@
                 }
             );
     }
-
     function GetDigest(baseUrl,callback) {
         $.ajax({
             url: baseUrl + "/_api/contextinfo",

@@ -7,7 +7,7 @@
             <div class="comment-block">
                 <div class="comment-arrow"></div>
                 <span class="comment-by">
-                    <strong>{{comment.CreatedBy}}</strong>
+                    <strong>{{comment.name}}</strong>
                     <span class="pull-right">
                         <span> <a href="" ng-click="showReply(comment);"><i class="fa fa-reply"></i> Reply</a></span>
                     </span>
@@ -34,6 +34,6 @@
             </div>
         </div>
         <!--comments directive-->
-        <comments comments="comments" template="../app/templates/comments.html" page-id="comment.PageID" parent-id="comment.ID"></comments>
+        <comments comments="comments" template="../app/templates/comments.html" parent-id="comment.ID"></comments>
     </li>
 </ul>

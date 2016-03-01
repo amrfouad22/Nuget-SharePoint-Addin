@@ -4,15 +4,16 @@
     ])
 	.config(config);
     // Configure the routes.
-    function config($routeProvider, $httpProvider) {
+    function config($routeProvider, $httpProvider, $locationProvider) {
         $routeProvider
-			.when('/', {
+			.when('/CommentApp.aspx', {
 			    templateUrl: '../app/views/main.html',
 			    controller: 'MainController',
 			    controllerAs: 'main'
 			})
 			.otherwise({
-			    redirectTo: '/'
+			    redirectTo: '/CommentApp.aspx'
 			});
+        $locationProvider.html5Mode(true);
     };
 })();

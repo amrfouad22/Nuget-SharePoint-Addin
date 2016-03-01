@@ -1,20 +1,22 @@
-﻿<div class="post-block post-comments clearfix" ng-init="main.loadComments()">
-    <h3 class="heading-primary"><i class="fa fa-comments"></i>Comments ({{main.comments.length}})</h3>
-   <comments comments="main.comments" page-id="main.pageId" template="../app/templates/comments.html"></comments>
-</div>
-<div class="post-block post-leave-comment">
-    <h3 class="heading-primary">Leave a comment</h3>
-    <div class="row">
-        <div class="form-group">
-            <div class="col-md-12">
-                <label>Comment *</label>
-                <textarea maxlength="5000" rows="10" class="form-control" ng-model="main.newComment"></textarea>
+﻿<div>
+    <div class="post-block post-comments clearfix" ng-init="main.loadComments()">
+        <h3 class="heading-primary"><i class="fa fa-comments"></i>Comments ({{main.comments.length}})</h3>
+        <comments comments="main.comments" template="../app/templates/comments.html"></comments>
+    </div>
+    <div class="post-block post-leave-comment">
+        <h3 class="heading-primary">Leave a comment</h3>
+        <div class="row">
+            <div class="form-group">
+                <div class="col-md-12">
+                    <label>Comment *</label>
+                    <textarea maxlength="5000" rows="10" class="form-control" ng-model="main.newComment"></textarea>
+                </div>
             </div>
         </div>
-    </div>
-    <div class="row">
-        <div class="col-md-12">
-            <input type="submit" value="Post Comment" class="btn btn-primary btn-lg" data-loading-text="Loading..." ng-click="main.addComment()"/>
+        <div class="row">
+            <div class="col-md-12">
+                <input type="submit" value="Post Comment" class="btn btn-primary btn-lg" data-loading-text="Loading..." ng-click="main.addComment()" />
+            </div>
         </div>
     </div>
 </div>
