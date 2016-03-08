@@ -1,7 +1,7 @@
 <?xml version="1.0"?>
 <package >
   <metadata>
-    <id>SPAngualrJS</id>
+    <id>SPAddInAngualrJS</id>
     <version>1.0.0</version>
     <authors>Amr Fouad</authors>
     <owners>Amr Fouad</owners>

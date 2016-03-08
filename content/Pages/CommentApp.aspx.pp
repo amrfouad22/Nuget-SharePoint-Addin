@@ -68,7 +68,7 @@
 		<!--[if gte IE 9]><!-->
 		<script src="../assets/vendor/jquery/jquery.js"></script>
 		<!--<![endif]-->
-        <base href="/SharePointApp2/Pages/commentapp.aspx" />
+        <base href="/$rootnamespace$/Pages/commentapp.aspx" />
 	</head>
 	<body>
 		<div class="body">

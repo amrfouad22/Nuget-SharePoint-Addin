@@ -6,7 +6,7 @@
        var vm = this;
        //get the page Id from the client webpart properties
        vm.pageId = $location.search().PageID;
-       var baseUrl = $location.absUrl().substring(0, $location.absUrl().indexOf('SharePointApp2'))+'SharePointApp2';
+       var baseUrl = $location.absUrl().substring(0, $location.absUrl().indexOf('/Pages/'));
        vm.addComment = function () {
            var newComment={};
            //newComment.CreatedBy=vm.currentUser;
