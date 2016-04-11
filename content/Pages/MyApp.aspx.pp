@@ -5,14 +5,14 @@
 
 <WebPartPages:AllowFraming ID="AllowFraming" runat="server" />
 <!DOCTYPE html>
-<html ng-app="CommentApp">
+<html ng-app="MyAngularApp">
 	<head>
 
 		<!-- Basic -->
 		<meta charset="utf-8">
         <meta http-equiv="X-UA-Compatible" content="IE=edge">	
 
-		<title>Page Comments</title>	
+		<title>My App Part</title>	
 
 		<meta name="keywords" content="Sample SharePoint Angular App" />
 		<meta name="description" content="SharePoint Add-in Angualr App">
@@ -50,8 +50,8 @@
 
 		<script src="../app/app.js"></script>
 		<script src="../app/controllers/mainController.js"></script>
-		<script src="../app/directives/comments.js"></script>
-		<script src="../app/services/commentSvc.js"></script>
+		<script src="../app/directives/mydirective.js"></script>
+		<script src="../app/services/dataSvc.js"></script>
 		<!-- Head Libs -->
 		<script src="../assets/vendor/modernizr/modernizr.js"></script>
 		<!--[if IE]>

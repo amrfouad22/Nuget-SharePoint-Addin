@@ -14,11 +14,8 @@ try{
     $project.ProjectItems.AddFromTemplate($itemTemplate,"assets")
     $assets=$project.ProjectItems.Item("assets")
     Add-Files "$installPath\assets" $assets  
-    #add custom comment list item template to the solution
-    $listItem="$installPath\templates\CommentList\CommentList.vstemplate"
-    $project.ProjectItems.AddFromTemplate($listItem,"CommentsList")
-    $clientWebPart="$installPath\templates\commentapp\CommentAppPart.vstemplate"
-    $project.ProjectItems.AddFromTemplate($clientWebPart,"CommentAppPart")
+    $clientWebPart="$installPath\templates\myapp\myAppPart.vstemplate"
+    $project.ProjectItems.AddFromTemplate($clientWebPart,"MyAppPart")
     write-output "done..."
 }
 catch{
