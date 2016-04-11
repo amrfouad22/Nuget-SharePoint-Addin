@@ -11,9 +11,6 @@ try{
     $project.ProjectItems.AddFromTemplate($itemTemplate,"app")
     $app= $project.ProjectItems.Item("app")
     Add-Files "$installPath\app" $app
-    $project.ProjectItems.AddFromTemplate($itemTemplate,"assets")
-    $assets=$project.ProjectItems.Item("assets")
-    Add-Files "$installPath\assets" $assets  
     $clientWebPart="$installPath\templates\myapp\myAppPart.vstemplate"
     $project.ProjectItems.AddFromTemplate($clientWebPart,"MyAppPart")
     write-output "done..."

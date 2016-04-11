@@ -6,6 +6,7 @@
                 replace: true,
                 scope: {
                     template: '@',                  //directive display template.
+                    data:'='                        //data passed from controller.
                 }
             };
             definition.link = function postLink(scope, element) {
