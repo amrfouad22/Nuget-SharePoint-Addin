@@ -68,7 +68,7 @@
 		<!--[if gte IE 9]><!-->
 		<script src="../assets/vendor/jquery/jquery.js"></script>
 		<!--<![endif]-->
-        <base href="/$rootnamespace$/Pages/commentapp.aspx" />
+        <base href="/$rootnamespace$/Pages/myapp.aspx" />
 	</head>
 	<body>
 		<div class="body">
